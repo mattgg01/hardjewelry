@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Concepts</title>
+    <link rel="stylesheet" href="/conceptsCss">
+</head>
+<body>
+    <header>
+        <div id="headerName">
+            <h2>Hard Jewelry</h2>
+        </div>
+        <div class="landingLogo">
+            <a href="/"><img id="shippinglogo" src="/assets/images/freeshipping.gif"></a>
+        </div>
+        <nav id="headerNav">
+            <h5><a class="links" href="https://hardjewelry.com/">Shop</a></h5>
+            <h5><a class="links" href="/blackjack">Blackjack</a></h5>
+        </nav>
+    </header>
+
+
+            <form class="conceptSubmitForm" id="formSection">
+            <h1>Hard Jewelry Concept Submissions</h1>
+            <div class="inputs">
+            <h2>Share A Concept Design</h3>
+            <label for="fName" class="inputHeaders">First Name:</label>
+            <input type="text" id="fName" name="fName" class="cardInput" required><br>
+            <label for="email" class="inputHeaders">Email:</label>
+            <input type="text" id="email" name="email" class="cardInput" required><br>
+            <label for="conceptName" class="inputHeaders">Concept Name:</label>
+            <input type="text" id="conceptName" name="conceptName" class="cardInput" required><br>
+            <label for="conceptImage" class="inputHeaders">Concept Draft Image:</label>
+            <input type="text" placeholder="Imgur links work best" id="conceptImage" class="cardInput" required><br>
+            <label for="comments" class="inputHeaders">Comments</label>
+            <textarea id="comments" placeholder="Tell us a little bit about this concept piece!" name="comments" class="cardInput" maxlength="600" required></textarea><br>
+            <button id="submitConceptBtn">Submit</button>
+            <button id="submitEdit" class="hidden">Submit Changes</button>
+            </div>
+            </form>
+        </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./concepts.js"></script>
+</body>
+</html>

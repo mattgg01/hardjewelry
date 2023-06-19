@@ -1,0 +1,242 @@
+html { 
+	background: url("../../../assets/images/background.png") no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+@font-face {
+    font-family: 'Anarchaos';
+    src: url('../../../assets/fonts/Anarchaos.otf');
+}
+
+
+
+
+header {
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #2b7fd3;
+    border-radius: 10px;
+    background-color: black;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 850px;
+    margin: auto;
+}
+
+#headerName {
+    display: flex;
+    align-items: center;
+    margin: 10px;
+    font-family: 'Anarchaos', sans-serif;
+    font-size: xx-large;
+    margin-bottom: 25px;
+    color: white;
+}
+
+#shippinglogo{
+    height: 60px;
+    align-content: center;
+    margin: auto;
+    width: 100%;
+}
+
+#headerNav {
+    display: flex;
+    align-items: center;
+}
+
+
+.links {
+    margin: 10px;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    margin: 5px;
+    padding: 10px; 
+    border-radius: 5px;
+    font-size: large;
+    font-weight: bolder;
+}
+
+#comments{
+    width: 250px;
+    height: 150px;
+    padding: 0 0.4rem 0.4rem 0;
+}
+#conceptImage{
+    width: 200px;
+    margin: auto;
+    text-align: center;
+}
+
+
+
+
+#inputWelcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#conceptsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+
+.conceptSubmitForm {
+    height: 650px;
+    width: 500px;
+    margin: auto;
+    display: flex;
+    color: black;
+    border-radius: 15px 50px;
+    flex-direction: column;
+    align-items: center;
+    border-style: solid;
+    border-width: 3px;
+    border-color: black;
+    padding: 50px;
+    margin-top: 5px;
+    padding-bottom: 55px;
+
+}
+
+#submitConceptBtn{
+    height: 25px;
+    width: 75px;
+    font-size: large;
+    margin: auto;
+}
+
+.inputs{
+    background-color: rgba(255, 255, 255, 0.664);
+    border-radius: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    border-style: solid;
+    border-width: 1px;
+
+}
+
+.cardInput{
+    margin: auto;
+}
+
+#formSection{
+    background-color: rgba(219, 196, 164, 0.827);
+}
+
+.inputHeaders{
+    padding: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    font-weight: bolder;
+    font-size: large;
+    margin: auto;
+}
+
+.cardInput {
+    width: 130px;
+}
+
+label {
+    display: flex;
+}
+
+.conceptDivs {
+    height: 500px;
+    width: 360px;
+    margin: 8px;
+    display: flex;
+    border-radius: 15px 50px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border-style: solid;
+    border-width: 3px;
+    border-color: black;
+}
+
+#innerCardTop {
+    display: flex;
+    width: 360px;
+}
+
+#cardName {
+    padding-top: 2px;
+    padding-left: 2px;
+    margin-top: 2px;
+    margin-left: 2px;
+}
+
+#innerCardMid {
+    display: flex;
+    width: 310px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+#cardName {
+    padding: 0;
+    margin: 0;
+}
+
+#cardConceptName {
+    padding: 0;
+    margin: 0;
+}
+
+
+#innerCardImage {
+    height: 220px;
+    width: 310px;
+    background-color: black;
+    border-radius: 15px;
+    border: 1px solid black;
+}
+
+#cardImage {
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+#innerCardBottom {
+    display: flex;
+    height: 105px;
+    width: 310px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    border-radius: 15px;
+}
+
+#cardComments {
+    padding: 2px;
+    margin: 2px;
+}
+
+.innerCardBtns {
+    padding: 2px;
+    margin: 2px;
+}
+
+.hidden {
+    display: none;
+}
+
+.inputWelcome{
+    background-color: yellow;
+    width: 90px;
+}
