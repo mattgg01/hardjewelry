@@ -76,6 +76,7 @@ header {
 
 
 
+
 #inputWelcome {
     display: flex;
     flex-direction: column;
@@ -165,6 +166,7 @@ label {
     border-style: solid;
     border-width: 3px;
     border-color: black;
+    background-color: rgba(219, 196, 164, 0.827);
 }
 
 #innerCardTop {

@@ -136,13 +136,14 @@ function printToBrowser(data) {
         loggedConcept.setAttribute('class', 'conceptDivs')
         loggedConcept.innerHTML = `
         <div id="innerCardTop">
-            <p id="cardName">${data[i].fName} ${data[i].email}</p>
+            <p id="cardName">${data[i].fName}</p>
+            <p id="cardName">${data[i].email}</p>
         </div>
         <div id="innerCardMid">
-            <h2 id="cardConceptName">${data[i].concept_name}</h2><br>
+            <h2 id="conceptName">${data[i].conceptName}</h2><br>
         </div>
         <div id="innerCardImage">
-            <img id='cardImage' src="${data[i].image}" alt='user image here' style='max-width:100%;max-height:100%;'>
+            <img id='cardImage' src="${data[i].conceptImage}" alt='user image here' style='max-width:100%;max-height:100%;'>
         </div>
         <div id="innerCardBottom">
             <p id="cardComments">Comments: ${data[i].comments}</p>

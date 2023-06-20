@@ -46,7 +46,7 @@ module.exports = {
         .then(res.status(200))
         .catch(err => console.log('error creating fan submission', err))
     },
-    getClimbs: (req, res) => {
+    getConcepts: (req, res) => {
         sequelize.query(`
         SELECT * FROM user_submissions;
         `)
@@ -65,10 +65,8 @@ module.exports = {
     },
 
     editConcept: (req, res) => {
-        let {id} = req.query
         sequelize.query(`
         SELECT * FROM user_submissions
-        WHERE id = ${id}
         `)
         .then(dbRes => res.status(200).send(dbRes[0]))
         .catch(err => console.log('error editing concept', err))
