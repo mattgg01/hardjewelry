@@ -1,4 +1,4 @@
-require('dotenv').config()
+require('dotenv').config({ path: path.join(__dirname, '../.env') });
 const {CONNECTION_STRING} = process.env
 const Sequelize = require('sequelize')
 const path = require('path')
