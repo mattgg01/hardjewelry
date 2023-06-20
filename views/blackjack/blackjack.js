@@ -90,7 +90,6 @@ function startGame() {
         document.getElementById("your-cards").append(cardImg);
     }
     //before checking player sums after initial card draw, reduce aces in case player draws multiple aces adding up to >= 22
-    yourSum = reduceAce(yourSum, yourAceCount);
 
     //if your initial two card draws sum up to 21, player automatically stands, sums are compared and house draws until 17
     if(yourSum === 21){
