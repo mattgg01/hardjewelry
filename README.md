@@ -28,7 +28,7 @@
 - Modular & reusable BJ functions
 - Create SQL database that stores concepts from front end form submission
 - Concepts Submission Form with PSQL functionality
-- Permission levels 0 = customer , 1 = admin to view list of all submissions to keep fan information private
+- Permission levels 0 = customer, 1 = admin to view list of all submissions to keep fan information private
 - Login system with different permission levels for different endpoint access
 
 
