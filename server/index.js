@@ -3,6 +3,7 @@ const app = express()
 require('dotenv').config()
 app.use(express.json())
 const path = require('path')
+const {SERVER_PORT} = process.env
 // const {seed} = require('./seed.js')
 const {concepts, conceptsCss, blackjack, blackjackCss, blackjackJs, conceptPost, editConcept, submitEdits, landing, landingCss, conceptsJs, getConcepts} = require('./controller.js')
 
@@ -23,4 +24,4 @@ app.get('/getConcepts', getConcepts)
 //To seed DB again, move 'seed.js' to server folder first
 
 
-app.listen(4000, () => console.log(`Server listening on port 4000`))
+app.listen(SERVER_PORT, () => console.log(`Server listening on port ${SERVER_PORT}`))

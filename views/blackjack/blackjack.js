@@ -89,7 +89,6 @@ function startGame() {
         yourAceCount += checkAce(card);
         document.getElementById("your-cards").append(cardImg);
     }
-    //before checking player sums after initial card draw, reduce aces in case player draws multiple aces adding up to >= 22
 
     //if your initial two card draws sum up to 21, player automatically stands, sums are compared and house draws until 17
     if(yourSum === 21){
@@ -109,7 +108,6 @@ function startGame() {
             }
         //new sums after checking & reducing aces
         dealerSum = reduceAce(dealerSum, dealerAceCount);
-        yourSum = reduceAce(yourSum, yourAceCount);
         document.getElementById("hidden").src = "/assets/cards/" + hidden + ".png";
         canHit = false;
 
@@ -155,10 +153,7 @@ function hit() {
     yourSum += getValue(card);
     yourAceCount += checkAce(card);
     document.getElementById("your-cards").append(cardImg);
-    document.getElementById("your-sum").innerText = yourSum;
-    if(yourAceCount > 0){
-        yourSum = reduceAce(yourSum, yourAceCount)
-    }
+    document.getElementById("your-sum").innerText = reduceAce(yourSum, yourAceCount)
 
     //after card draw, check to see if bust
     if (reduceAce(yourSum, yourAceCount) > 21) { //A, J, 8 -> 1 + 10 + 8
@@ -169,7 +164,6 @@ function hit() {
         playAgain()
     //if your sum is 21, player cannot hit and dealer draws to >= 17
     }else if(yourSum === 21){
-
         //dealer draws to >= 17
         while(dealerSum < 17){
             let cardImg = document.createElement("img");
@@ -186,7 +180,6 @@ function hit() {
             }
         //reduce aces if sum exceeds 21 & aceCount > 0
         dealerSum = reduceAce(dealerSum, dealerAceCount);
-        yourSum = reduceAce(yourSum, yourAceCount);
         document.getElementById("hidden").src = "/assets/cards/" + hidden + ".png";
         canHit = false;
         //after dealer has drawn to >= 17 & player hits blackjack, compare sums
@@ -199,6 +192,12 @@ function hit() {
         else if (yourSum > dealerSum) {
             document.getElementById("dealer-sum").innerText = dealerSum;
             message = "You drew a Blackjack! And you won!";
+            canHit = false;
+            playAgain()
+        }
+        else{
+            document.getElementById("dealer-sum").innerText = dealerSum;
+            message = "You drew a Blackjack! And dealer bust!";
             canHit = false;
             playAgain()
         }
@@ -262,7 +261,7 @@ function stay() {
     }
 
     document.getElementById("dealer-sum").innerText = dealerSum;
-    document.getElementById("your-sum").innerText = yourSum;
+    document.getElementById("your-sum").innerText = reduceAce(yourSum, yourAceCount);
     document.getElementById("results").innerText = message;
 }
 
