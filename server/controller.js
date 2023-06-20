@@ -1,8 +1,16 @@
 const path = require('path')
 require('dotenv').config()
-const {DATABASE_URL} = process.env
+const {CONNECTION_STRING} = process.env
+const Sequelize = require('sequelize')
 
-
+const sequelize = new Sequelize(CONNECTION_STRING, {
+    dialect: 'postgres',
+    dialectOptions: {
+        ssl: {
+            rejectUnauthorized: false
+        }
+    }
+})
 
 module.exports = {
     concepts: (req, res) => {
@@ -32,7 +40,7 @@ module.exports = {
     conceptPost: (req, res) => {
         let { fName, email, conceptName, conceptImage, comments } = req.body
         sequelize.query(`
-        INSERT INTO user_submissions (fName, email, concept_name, concept_image, comments)
+        INSERT INTO user_submissions (fName, email, conceptName, conceptImage, comments)
         VALUES ('${fName}', '${email}', '${conceptName}', '${conceptImage}', '${comments}')
         `)
         .then(res.status(200))
@@ -73,8 +81,8 @@ module.exports = {
         UPDATE user_submissions
         SET fName = '${fName}', 
             email = '${email}', 
-            concept_name = '${conceptName}', 
-            concept_image = '${conceptImage}', 
+            conceptName = '${conceptName}', 
+            conceptImage = '${conceptImage}', 
             comments = '${comments}'
         WHERE id = ${id};
         `)
@@ -82,5 +90,3 @@ module.exports = {
         .catch(err => console.log('error deleting fan submission', err))
     }
 }
-
-
