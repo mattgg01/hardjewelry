@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-require('dotenv').config()
+require('dotenv').config({ path: path.join(__dirname, '../.env') });
 app.use(express.json())
 const path = require('path')
 // const {seed} = require('./seed.js')
