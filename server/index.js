@@ -1,8 +1,8 @@
 const express = require('express')
 const app = express()
-require('dotenv').config({ path: path.join(__dirname, '../.env') });
 app.use(express.json())
 const path = require('path')
+require('dotenv').config({ path: path.join(__dirname, '../.env') });
 // const {seed} = require('./seed.js')
 const {concepts, conceptsCss, blackjack, blackjackCss, blackjackJs, conceptPost, editConcept, submitEdits, landing, landingCss, conceptsJs, getConcepts} = require('./controller.js')
 
