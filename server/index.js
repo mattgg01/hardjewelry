@@ -2,6 +2,7 @@ const express = require('express')
 const app = express()
 require('dotenv').config()
 app.use(express.json())
+const {SERVER_PORT} = process.env
 const path = require('path')
 // const {seed} = require('./seed.js')
 const {concepts, conceptsCss, blackjack, blackjackCss, blackjackJs, conceptPost, editConcept, submitEdits, landing, landingCss, conceptsJs, getConcepts} = require('./controller.js')
