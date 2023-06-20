@@ -89,7 +89,7 @@ function editConcept(e) {
     axios.get(`/editConcept/?id= ${id}`)
     .then(res => {
         data = res.data
-        document.getElementById('fName').value = `${data[0].first_name}`
+        document.getElementById('fName').value = `${data[0].fName}`
         document.getElementById('email').value = `${data[0].email}`
         document.getElementById('conceptName').value = `${data[0].conceptName}`
         document.getElementById('grade').value = `${data[0].conceptImage}`
@@ -136,7 +136,7 @@ function printToBrowser(data) {
         loggedConcept.setAttribute('class', 'conceptDivs')
         loggedConcept.innerHTML = `
         <div id="innerCardTop">
-            <p id="cardName">${data[i].first_name} ${data[i].email}</p>
+            <p id="cardName">${data[i].fName} ${data[i].email}</p>
         </div>
         <div id="innerCardMid">
             <h2 id="cardConceptName">${data[i].concept_name}</h2><br>

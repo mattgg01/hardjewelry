@@ -32,7 +32,7 @@ module.exports = {
     conceptPost: (req, res) => {
         let { fName, email, conceptName, conceptImage, comments } = req.body
         sequelize.query(`
-        INSERT INTO user_submissions (first_name, email, concept_name, concept_image, comments)
+        INSERT INTO user_submissions (fName, email, concept_name, concept_image, comments)
         VALUES ('${fName}', '${email}', '${conceptName}', '${conceptImage}', '${comments}')
         `)
         .then(res.status(200))
@@ -71,7 +71,7 @@ module.exports = {
         let { fName, email, conceptName, conceptImage, comments } = req.body
         sequelize.query(`
         UPDATE user_submissions
-        SET first_name = '${fName}', 
+        SET fName = '${fName}', 
             email = '${email}', 
             concept_name = '${conceptName}', 
             concept_image = '${conceptImage}', 
